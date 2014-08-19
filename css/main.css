@@ -16,3 +16,16 @@ strong.certificacao-label {
   width: 5em;
   display: inline-block;
 }
+
+.avaliacao {
+  display: none;
+}
+
+.rating-input {
+  display: inline;
+}
+
+td.header {
+  font-weight: bold;
+  vertical-align: middle !important;
+}
