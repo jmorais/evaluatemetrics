@@ -12,7 +12,7 @@ body {
   margin-bottom: 20px;
 }
 
-strong.certificacao-label {
+.certificacao-label {
   width: 5em;
   display: inline-block;
 }
@@ -23,6 +23,7 @@ strong.certificacao-label {
 
 .rating-input {
   display: inline;
+  font-size: 16px;
 }
 
 td.header {
