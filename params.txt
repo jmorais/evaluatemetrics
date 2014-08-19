@@ -1,0 +1,30 @@
+#met1 - >Número de defeitos abertos em qualquer dia de liberação = Número de relatos de defeitos abertos
+#met2 - >Tempo de (retorno) recuperação do defeito
+#met3 - >Tempo gasto para corrigir o defeito
+#met4 - >Tempo planejado para corrigir o defeito
+#met5 - >Total de defeitos encontrados nos testes = Número de defeito cometidos por uma equipe ou por um programador = Total de defeitos encontrados pelo cliente = Número de defeitos durante a revisão da avaliação
+#met6 - >Defeitos resolvidos
+#met7 - >Esforço gasto para correção de defeitos
+#met8 - >Densidade de defeitos = Densidade de erros = Densidade de erro por iteração
+#met9 - >Número de casos de teste automatizados
+#met10 -> Número de casos de teste manuais
+#met11 -> Número de testes de aceitação por história
+#met12 -> Tempo para corrigir testes (Time to fix tests)
+#met13 -> Tempo de conclusão do projeto = hora do início ao encerramento do projeto = Esforço em horas
+#met14 -> Tarefas concluídas dentro do tempo
+#met15 -> Pontos de história concluídos por iteração = Tamanho de histórias de usuários = Tamanho (em pontos de história) de cada história de usuário no Product Backlog = Quantidade de trabalho realizado em cada iteração (em pontos de histórias) = Estimativa de histórias de usuário (tamanho)
+#met16 -> Tamanho do backlog
+#met17 -> Histórias de usuário não verificadas
+#met18 -> Quantidades de trabalho restante (em horas) para cada tarefa da iteração = Estimativa da quantidade de trabalho restante que precisa ser feito
+#met19 -> Quantidades de trabalho gasto (em horas) para cada tarefa na iteração
+#met20 -> Número de problemas reportados nas reuniões diárias
+#met21 -> Tarefas executadas
+#met22 -> Esforço gasto em testes
+#met23 -> Eficiência na remoção de defeitos
+#met24 -> Estimativa de histórias de usuário (tempo)
+#met25 -> Precisão da estimativa de teste (tempo para construir)
+#met26 -> Percentual de funções que seguem os requisitos (Estórias aprovadas)
+#met27 -> Percentual do esforço despendido para correção de erros em relação ao esforço gasto em todo o projeto
+#met28 -> Percentual de cobertura de teste = Cobertura de teste
+#met29 -> Pontualidade na entrega
+#met30 -> Tempo de resposta do sistema
