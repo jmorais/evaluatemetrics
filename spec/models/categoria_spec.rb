@@ -8,4 +8,6 @@ describe Categoria do
   end
 
   it { should validate_presence_of(:nome) }
+  it { should have_many(:metricas) }
+
 end

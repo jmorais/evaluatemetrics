@@ -6,4 +6,7 @@ describe Resposta do
 
     expect(resposta).to be_valid
   end
+
+  it { should belong_to(:entrevistado) }
+  it { should belong_to(:metrica) }
 end

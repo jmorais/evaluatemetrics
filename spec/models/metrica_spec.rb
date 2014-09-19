@@ -8,4 +8,7 @@ describe Metrica do
     expect(metrica).to be_valid
   end
 
+  it { should belong_to(:categoria) }
+  it { should have_many(:respostas) }
+
 end

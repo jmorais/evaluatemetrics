@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919044407) do
+ActiveRecord::Schema.define(version: 20140919045408) do
 
-  create_table "categoria", force: true do |t|
+  create_table "categorias", force: true do |t|
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,13 +59,21 @@ ActiveRecord::Schema.define(version: 20140919044407) do
     t.string   "classificacao_3"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "categoria_id"
   end
 
-  create_table "resposta", force: true do |t|
+  add_index "metricas", ["categoria_id"], name: "index_metricas_on_categoria_id"
+
+  create_table "respostas", force: true do |t|
     t.string   "observacao"
-    t.integer  "avaliacao",  limit: 1, default: 0
+    t.integer  "avaliacao",       limit: 1, default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "entrevistado_id"
+    t.integer  "metrica_id"
   end
+
+  add_index "respostas", ["entrevistado_id"], name: "index_respostas_on_entrevistado_id"
+  add_index "respostas", ["metrica_id"], name: "index_respostas_on_metrica_id"
 
 end

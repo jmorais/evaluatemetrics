@@ -1,6 +1,6 @@
-class CreateResposta < ActiveRecord::Migration
+class CreateRespostas < ActiveRecord::Migration
   def change
-    create_table :resposta do |t|
+    create_table :respostas do |t|
       t.string :observacao
       t.integer :avaliacao, default: 0, limit: 1
       
