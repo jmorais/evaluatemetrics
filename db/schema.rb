@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919035859) do
+ActiveRecord::Schema.define(version: 20140919042201) do
 
   create_table "entrevistados", force: true do |t|
     t.string   "nome"
@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 20140919035859) do
     t.string   "comentario_metodos_ageis"
     t.string   "comentario_teste"
     t.string   "comentario_adicional"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "metricas", force: true do |t|
+    t.string   "objetivo"
+    t.string   "pergunta"
+    t.string   "base_medicao"
+    t.string   "suposicoes"
+    t.string   "tendencia_experada"
+    t.string   "quando_utilizar"
+    t.string   "quando_parar"
+    t.string   "manipulacao"
+    t.string   "cuidados"
+    t.string   "coleta"
+    t.string   "classificacao_1"
+    t.string   "classificacao_2"
+    t.string   "classificacao_3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
