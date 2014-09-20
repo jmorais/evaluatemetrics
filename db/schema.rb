@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919045408) do
+ActiveRecord::Schema.define(version: 20140919221745) do
 
   create_table "categorias", force: true do |t|
     t.string   "nome"
@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20140919045408) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "categoria_id"
+    t.string   "fonte"
+    t.string   "importancia_metodos_ageis"
+    t.string   "nome"
   end
 
   add_index "metricas", ["categoria_id"], name: "index_metricas_on_categoria_id"

@@ -9,5 +9,5 @@ describe Entrevistado do
 
   it { should validate_presence_of(:nome) }  
   it { should validate_presence_of(:email) }
-
+  it { should have_many(:respostas) }
 end
