@@ -1,0 +1,71 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#entrevistado-<%= entrevistado.id %>">
+        <%= entrevistado.nome %>
+      </a>
+    </h4>
+  </div>
+
+  <div id="entrevistado-<%= entrevistado.id %>" class="panel-collapse collapse">
+    <div class="panel-body">
+        
+      <table class="table table-condensed table-bordered">
+        <tr><td class="header col-xs-3">Nome</td><td class="col-xs-9"><%= entrevistado.nome %></td></tr>
+        <tr><td class="header col-xs-3">Email</td><td class="col-xs-9"><%= entrevistado.email %></td></tr>
+        <tr><td class="header col-xs-3">Papéis já assumidos em projetos de software</td><td class="col-xs-9"><%= entrevistado.papeis %></td></tr>
+        <tr><td class="header col-xs-3">Formação</td><td class="col-xs-9"><%= entrevistado.formacao %></td></tr>
+        <tr><td class="header col-xs-3">Quantos projetos de software você participa ou participou atuando na área de teste</td><td class="col-xs-9"><%= entrevistado.qtd_projetos_testes %></td></tr>
+        <tr><td class="header col-xs-3">Como você avalia seu conhecimento em teste de software</td><td class="col-xs-9"><%= entrevistado.av_conhecimento_testes %></td></tr>
+        <tr><td class="header col-xs-3">Certificações</td><td class="col-xs-9"><%= entrevistado.certificacoes %></td></tr>
+        <tr><td class="header col-xs-3">Modelos de maturidade em que possui conhecimento</td><td class="col-xs-9"><%= entrevistado.modelos_maturidade %></td></tr>
+        <tr><td class="header col-xs-3">Nível de conhecimento em Métodos Agéis</td><td class="col-xs-9"><%= entrevistado.nivel_conhecimento_metodos_ageis %></td></tr>
+        <tr><td class="header col-xs-3">Nível de experiência em Métodos Agéis</td><td class="col-xs-9"><%= entrevistado.experiencia_metodos_ageis %></td></tr>
+        <tr><td class="header col-xs-3">Nível de exposição ao Desenvolvimento Ágil</td><td class="col-xs-9"><%= entrevistado.exposicao_desenvolvimento_agil %></td></tr>
+        <tr><td class="header col-xs-3">Em quais métodos ágeis você possui conhecimento?</td><td class="col-xs-9"><%= entrevistado.metodos_ageis %></td></tr>
+        <tr><td class="header col-xs-3">Você já utilizou métricas de software?</td><td class="col-xs-9"><%= entrevistado.usou_metricas %></td></tr>
+        <tr><td class="header col-xs-3">Quais métricas?</td><td class="col-xs-9"><%= entrevistado.quais_metricas %></td></tr>
+        <tr><td class="header col-xs-3">Você conhece alguma norma que define métrica de software?</td><td class="col-xs-9"><%= entrevistado.conhece_norma_metrica %></td></tr>
+        <tr><td class="header col-xs-3">Quais normas?</td><td class="col-xs-9"><%= entrevistado.quais_normas_metricas %></td></tr>
+        <tr><td class="header col-xs-3">Experiência com métricas aplicadas ao contexto de métodos ágeis</td><td class="col-xs-9"><%= entrevistado.comentario_metodos_ageis %></td></tr>
+        <tr><td class="header col-xs-3">Experiência com métricas aplicadas ao processo de teste de software</td><td class="col-xs-9"><%= entrevistado.comentario_teste %></td></tr>
+        <tr><td class="header col-xs-3">Comentários adicionais</td><td class="col-xs-9"><%= entrevistado.comentario_adicional %></td></tr>
+      </table>
+
+      <table class="table table-condensed table-bordered">
+        <tr>
+          <th>Métrica</th>
+          <th>Avaliação</th>
+          <th>Observação</th>
+        </tr>
+        <% entrevistado.respostas.each do |resposta| %>
+          <tr>
+            <td class="col-xs-6"><%= resposta.metrica.nome %></td>
+            <td class="col-xs-1"><%= resposta.avaliacao %></td>
+            <td class="col-xs-5"><%= resposta.observacao %></td>
+          </tr>
+        <% end %>
+      </table>
+
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

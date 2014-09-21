@@ -1,0 +1,87 @@
+  <%= form_for(@metrica) do |f| %>
+
+    <div class="form-group">
+      <%= f.label "Nome" %>
+      <%= f.text_area :nome, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Objetivo" %>
+      <%= f.text_area :objetivo, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Pergunta" %>
+      <%= f.text_area :pergunta, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Base de Medição" %>
+      <%= f.text_area :base_medicao, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Suposições" %>
+      <%= f.text_area :suposicoes, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Tendência esperada" %>
+      <%= f.text_area :tendencia_experada, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Quando utilizar" %>
+      <%= f.text_area :quando_utilizar, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Quando parar de utilizar" %>
+      <%= f.text_area :quando_parar, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Formas de manipulação" %>
+      <%= f.text_area :manipulacao, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Cuidados e observações" %>
+      <%= f.text_area :cuidados, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Atividade de coleta" %>
+      <%= f.text_area :coleta, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Fonte" %>
+      <%= f.text_area :fonte, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Importância para métodos ágeis" %>
+      <%= f.text_area :importancia_metodos_ageis, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Classificação 1" %>
+      <%= f.text_area :classificacao_1, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Classificação 2" %>
+      <%= f.text_area :classificacao_2, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Classificação 3" %>
+      <%= f.text_area :classificacao_3, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Salvar", class: "btn btn-primary btn-block" %>
+    </div>
+
+  <% end %>

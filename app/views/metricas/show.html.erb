@@ -1,0 +1,24 @@
+<div class="intro">
+  <div class="header">
+    <h1>Métricas</h1>
+  </div>
+
+  <table class="table table-bordered">
+
+    <tr>
+      <th class="col-xs-7">Métrica</th>
+      <th class="col-xs-3">Categoria</th>
+      <th class="col-xs-2"></th>
+    </tr>
+
+    <% @metricas.each do |metrica| %>
+      <tr>
+        <td><%= metrica.nome %></td>
+        <td><%= metrica.categoria.nome %></td>
+        <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i> Editar'.html_safe, edit_metrica_path(metrica), class: "btn btn-primary btn-block" %>
+      </tr>
+    <% end %>
+
+  </table>
+
+</div>
