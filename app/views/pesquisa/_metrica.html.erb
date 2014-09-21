@@ -1,0 +1,92 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion-<%= metrica.categoria.id %>" href="#met-<%= metrica.id %>">
+        2.<%= categoria_index %>.<%= metrica_counter + 1 %>. <%= metrica.nome %>
+      </a>
+    </h4>
+  </div>
+
+  <div id="met-<%= metrica.id %>" class="panel-collapse collapse">
+    <div class="panel-body">
+      
+      <%= hidden_field_tag "metrica[#{metrica.id}][id]", metrica.id %>
+
+      <div class="avaliacao-input">
+        <div><strong>Avaliação</strong>: <input type="number" data-metrica="<%= metrica.id %>" name="metrica[<%= metrica.id %>][avaliacao]" id="metrica1" data-max="10" data-min="1" class="rating value-rating" /> <span class="stars"></span> <span class="stars-error text-danger"></span></div>
+        <div><strong>Observações</strong>: <input type="text" name="metrica[<%= metrica.id %>][observacao]" class="form-control"></div>
+
+        <a href="#mais-<%= metrica.id %>" data-toggle="collapse">Ver informações</a>
+      </div>
+      
+      <div class="collapse" id="mais-<%= metrica.id %>">
+        <table class="table table-condensed table-bordered table-stripped">
+          <% if !metrica.objetivo.blank? %>
+            <tr><td class="header col-xs-3">Objetivo</td><td class="col-xs-9"><%= metrica.objetivo %></td></tr>
+          <% end %>
+          <% if !metrica.pergunta.blank? %>
+            <tr><td class="header col-xs-3">Pergunta</td><td class="col-xs-9"><%= metrica.pergunta %></td></tr>
+          <% end %>
+          <% if !metrica.base_medicao.blank? %>
+            <tr><td class="header col-xs-3">Base de Medição</td><td class="col-xs-9"><%= metrica.base_medicao %></td></tr>
+          <% end %>
+          <% if !metrica.suposicoes.blank? %>
+            <tr><td class="header col-xs-3">Suposições</td><td class="col-xs-9"><%= metrica.suposicoes %></td></tr>
+          <% end %>
+          <% if !metrica.tendencia_experada.blank? %>
+            <tr><td class="header col-xs-3">Tendência esperada</td><td class="col-xs-9"><%= metrica.tendencia_experada %></td></tr>
+          <% end %>
+          <% if !metrica.quando_utilizar.blank? %>
+            <tr><td class="header col-xs-3">Quando utilizar</td><td class="col-xs-9"><%= metrica.quando_utilizar %></td></tr>
+          <% end %>
+          <% if !metrica.quando_parar.blank? %>
+            <tr><td class="header col-xs-3">Quando parar de utilizar</td><td class="col-xs-9"><%= metrica.quando_parar %></td></tr>
+          <% end %>
+          <% if !metrica.manipulacao.blank? %>
+            <tr><td class="header col-xs-3">Formas de manipulação</td><td class="col-xs-9"><%= metrica.manipulacao %></td></tr>
+          <% end %>
+          <% if !metrica.cuidados.blank? %>
+            <tr><td class="header col-xs-3">Cuidados e observações</td><td class="col-xs-9"><%= metrica.cuidados %></td></tr>
+          <% end %>
+          <% if !metrica.coleta.blank? %>
+            <tr><td class="header col-xs-3">Atividade de coleta</td><td class="col-xs-9"><%= metrica.coleta %></td></tr>
+          <% end %>
+          <% if !metrica.fonte.blank? %>
+            <tr><td class="header col-xs-3">Fonte</td><td class="col-xs-9"><%= metrica.fonte %></td></tr>
+          <% end %>
+          <% if !metrica.importancia_metodos_ageis.blank? %>
+            <tr><td class="header col-xs-3">Importância para métodos ágeis</td><td class="col-xs-9"><%= metrica.importancia_metodos_ageis %></td></tr>
+          <% end %>
+          <% if !metrica.classificacao_1.blank? %>
+            <tr><td class="header col-xs-3">Classificação 1</td><td class="col-xs-9"><%= metrica.classificacao_1 %></td></tr>
+          <% end %>
+          <% if !metrica.classificacao_2.blank? %>
+            <tr><td class="header col-xs-3">Classificação 2</td><td class="col-xs-9"><%= metrica.classificacao_2 %></td></tr>
+          <% end %>
+          <% if !metrica.classificacao_3.blank? %>
+            <tr><td class="header col-xs-3">Classificação 3</td><td class="col-xs-9"><%= metrica.classificacao_3 %></td></tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
