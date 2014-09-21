@@ -1,6 +1,5 @@
 class PesquisaController < ApplicationController
   def index
-    @questionario = Questionario.new
     @metricas = Metrica.all
     @categorias = Categoria.all
   end

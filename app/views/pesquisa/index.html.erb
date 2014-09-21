@@ -1,58 +1,48 @@
-<section class="container">
+<div class="intro">
+  <div class="header">
+    <h1>Questionário de levantamento de aspectos relevantes e métricas de qualidade para testes ágeis</h1>
+    <p>Thaynã Gonçalves Mota (Mestranda)</p>
+    <p>Prof. Arilo Claudio Dias Neto (Orientador)</p>
+    <p>Instituto de Computação – UFAM</p>
+  </div>
 
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      
-      <div class="intro">
-        <div class="header">
-          <h1>Questionário de levantamento de aspectos relevantes e métricas de qualidade para testes ágeis</h1>
-          <p>Thaynã Gonçalves Mota (Mestranda)</p>
-          <p>Prof. Arilo Claudio Dias Neto (Orientador)</p>
-          <p>Instituto de Computação – UFAM</p>
-        </div>
+  <div class="message">
+    <p>Caro especialista em teste de software,</p>
+    <p>Gostaríamos de solicitar cerca de 20 minutos do seu tempo para o preenchimento do questionário a seguir que faz parte de uma pesquisa de mestrado do Instituto de Computação – IComp da UFAM. Assim que a análise dos dados estiver completa, você terá acesso em primeira mão aos resultados obtidos.</p>
+    <p><em>Observação</em>: os dados pessoais coletados são para uso exclusivo dos pesquisadores e serão mantidos em total sigilo. Apenas informações totalizadas e anonimizadas serão divulgadas como resultado desta pesquisa.</p>
+  </div>
+</div>
 
-        <div class="message">
-          <p>Caro especialista em teste de software,</p>
-          <p>Gostaríamos de solicitar cerca de 20 minutos do seu tempo para o preenchimento do questionário a seguir que faz parte de uma pesquisa de mestrado do Instituto de Computação – IComp da UFAM. Assim que a análise dos dados estiver completa, você terá acesso em primeira mão aos resultados obtidos.</p>
-          <p><em>Observação</em>: os dados pessoais coletados são para uso exclusivo dos pesquisadores e serão mantidos em total sigilo. Apenas informações totalizadas e anonimizadas serão divulgadas como resultado desta pesquisa.</p>
-        </div>
-      </div>
+<div class="questionario">
+  
+  <%= form_tag(salvar_path, id:"form-avaliacao") do %>
+    <div class="caracterizacao">
+      <a id="caracterizacao"></a>
+      <%= render partial: "entrevistado" %>
+    </div>
 
-      <div class="questionario">
+    <div class="avaliacao">
         
-        <%= form_tag(salvar_path, id:"form-avaliacao") do %>
-          <div class="caracterizacao">
-            <a id="caracterizacao"></a>
-            <%= render partial: "entrevistado" %>
+      <% @categorias.each_with_index do |categoria, i| %>
+        
+        <div class="categoria" id="categoria-<%= categoria.id %>" data-categoria="<%= i + 2 %>">
+          <a href="#categoria-<%= i+1 %>"></a> 
+          <h3>2.<%= i+1 %> <%= categoria.nome %></h3>
+
+          <div class="panel-group" id="accordion-<%= categoria.id %>">
+            <%= render partial: "metrica", collection: categoria.metricas, locals: { categoria_index: i+1 } %>
           </div>
 
-          <div class="avaliacao">
-              
-            <% @categorias.each_with_index do |categoria, i| %>
-              
-              <div class="categoria" id="categoria-<%= categoria.id %>" data-categoria="<%= i + 2 %>">
-                <a href="#categoria-<%= i+1 %>"></a> 
-                <h3>2.<%= i+1 %> <%= categoria.nome %></h3>
-
-                <div class="panel-group" id="accordion-<%= categoria.id %>">
-                  <%= render partial: "metrica", collection: categoria.metricas, locals: { categoria_index: i+1 } %>
-                </div>
-
-                <div class="form-group">
-                  <% if i == @categorias.count %>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
-                  <% else %>
-                    <button class="btn btn-primary btn-lg btn-block" type="button" id="next-step-<%= i+2 %>" data-step="<%= i+2 %>">Próximo Passo</button>
-                  <% end %>
-                </div>
-              </div>
+          <div class="form-group">
+            <% if i == @categorias.count %>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+            <% else %>
+              <button class="btn btn-primary btn-lg btn-block" type="button" id="next-step-<%= i+2 %>" data-step="<%= i+2 %>">Próximo Passo</button>
             <% end %>
-
           </div>
-        <% end %>
-
-      </div>
+        </div>
+      <% end %>
 
     </div>
-  </div>
-</section>
+  <% end %>
+</div>
