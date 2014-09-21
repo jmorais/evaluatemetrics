@@ -1,4 +1,5 @@
 class MetricasController < ApplicationController
+  before_action :authenticate_admin_user!
 
   def show
     @metricas = Metrica.all

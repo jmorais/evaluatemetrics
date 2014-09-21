@@ -1,5 +1,7 @@
 Evaluatemetrics::Application.routes.draw do
   
+  devise_for :admin_users
+  
   get "/admin" => "admin#index"
   root 'pesquisa#index'
   get "/metricas" => "metricas#show"
