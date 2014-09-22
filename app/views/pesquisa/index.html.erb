@@ -34,8 +34,14 @@
           </div>
 
           <div class="form-group">
-            <% if i == @categorias.count %>
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+            <% if i == @categorias.count - 1 %>
+
+              <div class="form-group">
+                <label for="comentario_adicional">Comentários adicionais e sugestões</label>
+                <textarea class="form-control" name="comentario_adicional"></textarea>
+              </div>            
+                
+              <button class="btn btn-primary btn-lg btn-block" type="button" id="next-step-<%= i+2 %>" data-step="<%= i+2 %>">Enviar</button>
             <% else %>
               <button class="btn btn-primary btn-lg btn-block" type="button" id="next-step-<%= i+2 %>" data-step="<%= i+2 %>">Próximo Passo</button>
             <% end %>

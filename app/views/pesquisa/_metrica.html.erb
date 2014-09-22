@@ -15,7 +15,7 @@
 
       <div class="avaliacao-input">
         <div><strong>Avaliação</strong>: <input type="number" data-metrica="<%= metrica.id %>" name="metrica[<%= metrica.id %>][avaliacao]" id="metrica1" data-max="10" data-min="1" class="rating value-rating" /> <span class="stars"></span> <span class="stars-error text-danger"></span></div>
-        <div><strong>Observações</strong>: <input type="text" name="metrica[<%= metrica.id %>][observacao]" class="form-control"></div>
+        <div><strong>Observações</strong>: <textarea name="metrica[<%= metrica.id %>][observacao]" class="form-control"></textarea></div>
 
         <a href="#mais-<%= metrica.id %>" data-toggle="collapse">Ver informações</a>
       </div>
@@ -24,6 +24,12 @@
         <table class="table table-condensed table-bordered table-stripped">
           <% if !metrica.objetivo.blank? %>
             <tr><td class="header col-xs-3">Objetivo</td><td class="col-xs-9"><%= metrica.objetivo %></td></tr>
+          <% end %>
+          <% if !metrica.importancia_metodos_ageis.blank? %>
+            <tr><td class="header col-xs-3">Importância em Testes Ágeis</td><td class="col-xs-9"><%= metrica.importancia_metodos_ageis %></td></tr>
+          <% end %>
+          <% if !metrica.fonte.blank? %>
+            <tr><td class="header col-xs-3">Fonte</td><td class="col-xs-9"><%= metrica.fonte %></td></tr>
           <% end %>
           <% if !metrica.pergunta.blank? %>
             <tr><td class="header col-xs-3">Pergunta</td><td class="col-xs-9"><%= metrica.pergunta %></td></tr>
@@ -51,12 +57,6 @@
           <% end %>
           <% if !metrica.coleta.blank? %>
             <tr><td class="header col-xs-3">Atividade de coleta</td><td class="col-xs-9"><%= metrica.coleta %></td></tr>
-          <% end %>
-          <% if !metrica.fonte.blank? %>
-            <tr><td class="header col-xs-3">Fonte</td><td class="col-xs-9"><%= metrica.fonte %></td></tr>
-          <% end %>
-          <% if !metrica.importancia_metodos_ageis.blank? %>
-            <tr><td class="header col-xs-3">Importância para métodos ágeis</td><td class="col-xs-9"><%= metrica.importancia_metodos_ageis %></td></tr>
           <% end %>
           <% if !metrica.classificacao_1.blank? %>
             <tr><td class="header col-xs-3">Classificação 1</td><td class="col-xs-9"><%= metrica.classificacao_1 %></td></tr>
