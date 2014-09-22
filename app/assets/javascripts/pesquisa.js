@@ -1,7 +1,8 @@
 $(function() {
 
-  $(".rating").change(function(){
-    $(this).parents(".panel-footer").children(".stars").text($(this).val());
+  $(".value-rating").change(function(){
+    $(this).parents(".avaliacao-input").find(".stars").text($(this).val());
+    $(this).parents(".avaliacao-input").find(".stars-error").text("");
   });
 
   $("#next-step-1").click(function(){
