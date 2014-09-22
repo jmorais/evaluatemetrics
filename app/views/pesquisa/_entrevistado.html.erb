@@ -1,35 +1,35 @@
 <h2>1. Caracterização</h2>
 <div class="form-group">
   <label for="nome" class="control-label">Nome (obrigatório)</label>
-  <input type="text" class="form-control" id="nome" placeholder="Seu nome" required name="nome" value="teste">
+  <input type="text" class="form-control" id="nome" placeholder="Seu nome" required name="nome">
 </div>
 <div class="form-group">
   <label for="email" class="control-label">Email (obrigatório)</label>
-  <input type="email" class="form-control" id="email" placeholder="Seu email" required name="email" value="teste@teste.com">
+  <input type="email" class="form-control" id="email" placeholder="Seu email" required name="email">
 </div>
 <div class="form-group">
   <label >Papéis já assumidos em projetos de software</label>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Testador" name="papeis">
+      <input type="checkbox" value="Testador" name="papeis[]">
       Testador
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Desenvolvedor" name="papeis">
+      <input type="checkbox" value="Desenvolvedor" name="papeis[]">
       Desenvolvedor
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Analista de teste" name="papeis">
+      <input type="checkbox" value="Analista de teste" name="papeis[]">
       Analista de teste
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Gerente de teste" name="papeis">
+      <input type="checkbox" value="Gerente de teste" name="papeis[]">
       Gerente de teste
     </label>
   </div>
@@ -79,23 +79,23 @@
 
   <div class="checkbox">
     <strong class="certificacao-label">ISTQB</strong>
-    <label class="checkbox-inline"><input type="checkbox" value="CTFL" name="certificacoes">CTFL</label>              
-    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TA" name="certificacoes">CTAL-TA</label>                            
-    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TM" name="certificacoes">CTAL-TM</label>                            
-    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TTA" name="certificacoes">CTAL-TTA</label>              
+    <label class="checkbox-inline"><input type="checkbox" value="CTFL" name="certificacoes[]">CTFL</label>              
+    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TA" name="certificacoes[]">CTAL-TA</label>                            
+    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TM" name="certificacoes[]">CTAL-TM</label>                            
+    <label class="checkbox-inline"><input type="checkbox" value="CTAL-TTA" name="certificacoes[]">CTAL-TTA</label>              
   </div>
 
   <div class="checkbox">  
     <strong class="certificacao-label">QAI</strong>
-    <label class="checkbox-inline"><input type="checkbox" value="CAST" name="certificacoes">CAST</label>                                
-    <label class="checkbox-inline"><input type="checkbox" value="CSTE" name="certificacoes">CSTE</label>                                
-    <label class="checkbox-inline"><input type="checkbox" value="CSQA" name="certificacoes">CSQA</label>                                
-    <label class="checkbox-inline"><input type="checkbox" value="CSPM" name="certificacoes">CSPM</label>                
+    <label class="checkbox-inline"><input type="checkbox" value="CAST" name="certificacoes[]">CAST</label>                                
+    <label class="checkbox-inline"><input type="checkbox" value="CSTE" name="certificacoes[]">CSTE</label>                                
+    <label class="checkbox-inline"><input type="checkbox" value="CSQA" name="certificacoes[]">CSQA</label>                                
+    <label class="checkbox-inline"><input type="checkbox" value="CSPM" name="certificacoes[]">CSPM</label>                
   </div>
 
   <div class="checkbox">
     <strong class="certificacao-label">ALATS</strong>
-    <label class="checkbox-inline"><input type="checkbox" value="CBTS" name="certificacoes">CBTS</label>
+    <label class="checkbox-inline"><input type="checkbox" value="CBTS" name="certificacoes[]">CBTS</label>
   </div>  
 
   <label for="outros-papeis">Outras (especifique)</label>
@@ -106,37 +106,37 @@
   <label >Modelos de maturidade em que possui conhecimento</label>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="CMMI" name="modelos_maturidade">
+      <input type="checkbox" value="CMMI" name="modelos_maturidade[]">
       CMMI
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="MPS.Br" name="modelos_maturidade">
+      <input type="checkbox" value="MPS.Br" name="modelos_maturidade[]">
       MPS.Br
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="TMM" name="modelos_maturidade">
+      <input type="checkbox" value="TMM" name="modelos_maturidade[]">
       TMM
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="TMMI" name="modelos_maturidade">
+      <input type="checkbox" value="TMMI" name="modelos_maturidade[]">
       TMMI
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="TPI" name="modelos_maturidade">
+      <input type="checkbox" value="TPI" name="modelos_maturidade[]">
       TPI
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="MPT.Br" name="modelos_maturidade">
+      <input type="checkbox" value="MPT.Br" name="modelos_maturidade[]">
       MPT.Br
     </label>
   </div>              
@@ -177,8 +177,7 @@
     <option>Atua como membro de uma equipe</option>
     <option>Lidera uma equipe</option>
     <option>Coach ou consultor</option>
-    <option>Ouviu falar</option>
-    <option>mas não profundamente</option>
+    <option>Ouviu falar mas não profundamente</option>
   </select>
 </div>
 
@@ -186,49 +185,49 @@
   <label>Em quais métodos ágeis você possui conhecimento?</label>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="SCRUM" name="metodos_ageis">
+      <input type="checkbox" value="SCRUM" name="metodos_ageis[]">
       SCRUM
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Extreme Programming-XP" name="metodos_ageis">
+      <input type="checkbox" value="Extreme Programming-XP" name="metodos_ageis[]">
       Extreme Programming-XP
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Lean Development" name="metodos_ageis">
+      <input type="checkbox" value="Lean Development" name="metodos_ageis[]">
       Lean Development
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Feature Driven Development-DSDM" name="metodos_ageis">
+      <input type="checkbox" value="Feature Driven Development-DSDM" name="metodos_ageis[]">
       Feature Driven Development-DSDM
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Adaptive Software Development-ASD" name="metodos_ageis">
+      <input type="checkbox" value="Adaptive Software Development-ASD" name="metodos_ageis[]">
       Adaptive Software Development-ASD
     </label>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Crystal" name="metodos_ageis">
+      <input type="checkbox" value="Crystal" name="metodos_ageis[]">
       Crystal
     </label>
   </div>     
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Pragmatic Programming" name="metodos_ageis">
+      <input type="checkbox" value="Pragmatic Programming" name="metodos_ageis[]">
       Pragmatic Programming
     </label>
   </div>     
   <div class="checkbox">
     <label>
-      <input type="checkbox" value="Test Driven Development" name="metodos_ageis">
+      <input type="checkbox" value="Test Driven Development" name="metodos_ageis[]">
       Test Driven Development
     </label>
   </div>     
