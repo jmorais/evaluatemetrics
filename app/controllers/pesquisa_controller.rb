@@ -18,17 +18,17 @@ class PesquisaController < ApplicationController
     @entrevistado.qtd_projetos_testes = params[:qtd_projetos]
     @entrevistado.av_conhecimento_testes = params[:avaliacao_conhecimento]
     
-    @entrevistado.certificacoes = params[:certificacoes].join(", ") unless params[:papeis].nil?
+    @entrevistado.certificacoes = params[:certificacoes].join(", ") unless params[:certificacoes].nil?
     @entrevistado.certificacoes += ", #{params[:outras_certificacoes]}" if !params[:outras_certificacoes].blank?
 
-    @entrevistado.modelos_maturidade = params[:modelos_maturidade].join(", ") unless params[:papeis].nil?
+    @entrevistado.modelos_maturidade = params[:modelos_maturidade].join(", ") unless params[:modelos_maturidade].nil?
     @entrevistado.modelos_maturidade += ", #{params[:outros_modelos_maturidade]}" if !params[:outros_modelos_maturidade].blank?
 
     @entrevistado.nivel_conhecimento_metodos_ageis = params[:conhecimento_ageis]
     @entrevistado.experiencia_metodos_ageis = params[:experiencia_ageis]
     @entrevistado.exposicao_desenvolvimento_agil = params[:exposicao_ageis]
     
-    @entrevistado.metodos_ageis = params[:metodos_ageis].join(", ") unless params[:papeis].nil?
+    @entrevistado.metodos_ageis = params[:metodos_ageis].join(", ") unless params[:metodos_ageis].nil?
     @entrevistado.metodos_ageis += ", #{params[:outros_metodos_ageis]}" if !params[:outros_metodos_ageis].blank?
 
     @entrevistado.usou_metricas = params[:usou_metricas]
@@ -53,8 +53,6 @@ class PesquisaController < ApplicationController
     end
 
     @entrevistado.save
-
-    logger.debug params
 
     redirect_to :enviado
 
