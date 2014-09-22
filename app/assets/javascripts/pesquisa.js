@@ -2,6 +2,7 @@ $(function() {
 
   $(".value-rating").change(function(){
     $(this).parents(".avaliacao-input").find(".stars").text($(this).val());
+    $(this).parents(".panel-metrica").removeClass("panel-default").removeClass("panel-danger").addClass("panel-success").find(".stars-header").text(" (Sua avaliação: " + $(this).val() +")");
     $(this).parents(".avaliacao-input").find(".stars-error").text("");
   });
 
@@ -39,6 +40,7 @@ $(function() {
       if ($(this).val() === '') {
         has_error = true;
         $(this).parent().siblings(".stars-error").text("Avalie essa métrica!");
+        $(this).parents(".panel-metrica").removeClass("panel-default").addClass("panel-danger");
         met_id = $(this).data("metrica");
 
         $(".in").removeClass('in');
